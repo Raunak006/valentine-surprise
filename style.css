@@ -1,0 +1,97 @@
+body {
+     background-color: #ffebf3;
+     font-family: 'Comic Sans MS', cursive, sans-serif;
+     text-align: center;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+   }
+
+   .container {
+     background-color: #fff;
+     padding: 30px;
+     border-radius: 20px;
+     box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+   }
+
+   h1 {
+     color: #ff1493;
+     font-size: 2.5rem;
+     margin-bottom: 10px;
+   }
+
+   p {
+     color: #ff69b4;
+     font-size: 1.2rem;
+   }
+
+   .heart-container {
+     margin: 20px 0;
+   }
+
+   .heart {
+     width: 100px;
+     height: 100px;
+     background-color: #ff1493;
+     position: relative;
+     transform: rotate(-45deg);
+     margin: 0 auto;
+     animation: heartbeat 1.5s infinite;
+   }
+
+   .heart::before,
+   .heart::after {
+     content: '';
+     width: 100px;
+     height: 100px;
+     background-color: #ff1493;
+     border-radius: 50%;
+     position: absolute;
+   }
+
+   .heart::before {
+     top: -50px;
+     left: 0;
+   }
+
+   .heart::after {
+     top: 0;
+     left: 50px;
+   }
+
+   @keyframes heartbeat {
+     0%, 100% {
+       transform: rotate(-45deg) scale(1);
+     }
+     50% {
+       transform: rotate(-45deg) scale(1.1);
+     }
+   }
+
+   button {
+     background-color: #ff1493;
+     color: white;
+     border: none;
+     padding: 15px 30px;
+     font-size: 1.2rem;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+
+   button:hover {
+     background-color: #ff69b4;
+   }
+
+   .hidden {
+     display: none;
+   }
+
+   #response {
+     color: #ff1493;
+     font-size: 1.5rem;
+     margin-top: 20px;
+   }
